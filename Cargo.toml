@@ -1,0 +1,21 @@
+[package]
+name = "oxidye"
+version = "0.1.0"
+edition = "2021"
+description = "Fixed GTK and Breeze desktop themes with generated OKLCH accents"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+csscolorparser = "=0.7.2"
+jsonc-parser = { version = "=0.34.0", features = ["cst"] }
+palette = "=0.7.6"
+# 0.7.7's derive macros require modules absent from palette 0.7.6.
+palette_derive = "=0.7.6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+strip = true
+

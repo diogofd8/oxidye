@@ -1,0 +1,409 @@
+/* Fixed GTK 4 layout. Colour sources are imported from this directory. */
+@import url("fixed-colors.css");
+@import url("accent-colors.css");
+:root {
+    --accent-bg-color: @dt_accent_bg;
+    --accent-fg-color: @dt_accent_fg;
+    --accent-color: @dt_accent_text;
+    --destructive-bg-color: @dt_destructive_bg;
+    --destructive-fg-color: @dt_destructive_fg;
+    --destructive-color: @dt_destructive_text;
+    --success-bg-color: @dt_success_bg;
+    --success-fg-color: @dt_success_fg;
+    --success-color: @dt_success_text;
+    --warning-bg-color: @dt_warning_bg;
+    --warning-fg-color: @dt_warning_fg;
+    --warning-color: @dt_warning_text;
+    --error-bg-color: @dt_error_bg;
+    --error-fg-color: @dt_error_fg;
+    --error-color: @dt_error_text;
+    --window-bg-color: @dt_window_bg;
+    --window-fg-color: @dt_window_fg;
+    --view-bg-color: @dt_view_bg;
+    --view-fg-color: @dt_view_fg;
+    --headerbar-bg-color: @dt_headerbar_bg;
+    --headerbar-fg-color: @dt_headerbar_fg;
+    --headerbar-border-color: @dt_border;
+    --headerbar-backdrop-color: @dt_headerbar_backdrop;
+    --headerbar-shade-color: @dt_shade;
+    --headerbar-darker-shade-color: @dt_shade_strong;
+    --sidebar-bg-color: @dt_sidebar_bg;
+    --sidebar-fg-color: @dt_sidebar_fg;
+    --sidebar-backdrop-color: @dt_sidebar_backdrop;
+    --sidebar-border-color: @dt_border;
+    --sidebar-shade-color: @dt_shade;
+    --secondary-sidebar-bg-color: @dt_secondary_sidebar_bg;
+    --secondary-sidebar-fg-color: @dt_sidebar_fg;
+    --secondary-sidebar-backdrop-color: @dt_sidebar_backdrop;
+    --card-bg-color: @dt_card_bg;
+    --card-fg-color: @dt_card_fg;
+    --card-shade-color: @dt_shade;
+    --dialog-bg-color: @dt_dialog_bg;
+    --dialog-fg-color: @dt_dialog_fg;
+    --popover-bg-color: @dt_popover_bg;
+    --popover-fg-color: @dt_popover_fg;
+    --popover-shade-color: @dt_shade;
+    --thumbnail-bg-color: @dt_thumbnail_bg;
+    --thumbnail-fg-color: @dt_view_fg;
+    --overview-bg-color: @dt_surface_low;
+    --overview-fg-color: @dt_window_fg;
+    --active-toggle-bg-color: @dt_toggle_bg;
+    --active-toggle-fg-color: @dt_toggle_fg;
+    --shade-color: @dt_shade;
+    --scrollbar-outline-color: @dt_scrollbar_outline;
+    --panel-bg-color: @dt_window_bg;
+    --panel-fg-color: @dt_window_fg;
+    --insensitive-bg-color: @dt_disabled_bg;
+    --insensitive-fg-color: @dt_disabled_fg;
+    --insensitive-base-color: @dt_disabled_bg;
+    --unfocused-insensitive-color: @dt_disabled_fg;
+    --hyprbar-button-bg: @dt_button_bg;
+    --hyprbar-button-fg: @dt_button_fg;
+    --hyprbar-button-hover: @dt_button_hover;
+    --hyprbar-button-pressed: @dt_button_pressed;
+    --hyprbar-control-border: @dt_control_border;
+    --hyprbar-muted-fg: @dt_muted_fg;
+    --hyprbar-focus: @dt_focus;
+    --hyprbar-tooltip-bg: @dt_tooltip_bg;
+    --hyprbar-tooltip-fg: @dt_tooltip_fg;
+    --hyprbar-menu-bg: @dt_menu_bg;
+    --hyprbar-menu-hover: @dt_menu_hover;
+    --hyprbar-accent-hover: @dt_accent_hover;
+    --hyprbar-accent-pressed: @dt_accent_pressed;
+    --hyprbar-selection-bg: @dt_selection_bg;
+    --hyprbar-selection-fg: @dt_selection_fg;
+    --hyprbar-scrollbar: @dt_scrollbar;
+    --hyprbar-scrollbar-hover: @dt_scrollbar_hover;
+    --hyprbar-osd-bg: @dt_osd_bg;
+    --hyprbar-osd-fg: @dt_osd_fg;
+}
+
+/* Compatibility names for applications which still request named colours. */
+@define-color accent_bg_color @dt_accent_bg;
+@define-color accent_fg_color @dt_accent_fg;
+@define-color accent_color @dt_accent_text;
+@define-color destructive_bg_color @dt_destructive_bg;
+@define-color destructive_fg_color @dt_destructive_fg;
+@define-color destructive_color @dt_destructive_text;
+@define-color success_bg_color @dt_success_bg;
+@define-color success_fg_color @dt_success_fg;
+@define-color success_color @dt_success_text;
+@define-color warning_bg_color @dt_warning_bg;
+@define-color warning_fg_color @dt_warning_fg;
+@define-color warning_color @dt_warning_text;
+@define-color error_bg_color @dt_error_bg;
+@define-color error_fg_color @dt_error_fg;
+@define-color error_color @dt_error_text;
+@define-color window_bg_color @dt_window_bg;
+@define-color window_fg_color @dt_window_fg;
+@define-color view_bg_color @dt_view_bg;
+@define-color view_fg_color @dt_view_fg;
+@define-color headerbar_bg_color @dt_headerbar_bg;
+@define-color headerbar_fg_color @dt_headerbar_fg;
+@define-color headerbar_border_color @dt_border;
+@define-color headerbar_backdrop_color @dt_headerbar_backdrop;
+@define-color headerbar_shade_color @dt_shade;
+@define-color headerbar_darker_shade_color @dt_shade_strong;
+@define-color sidebar_bg_color @dt_sidebar_bg;
+@define-color sidebar_fg_color @dt_sidebar_fg;
+@define-color sidebar_backdrop_color @dt_sidebar_backdrop;
+@define-color sidebar_border_color @dt_border;
+@define-color sidebar_shade_color @dt_shade;
+@define-color secondary_sidebar_bg_color @dt_secondary_sidebar_bg;
+@define-color secondary_sidebar_fg_color @dt_sidebar_fg;
+@define-color secondary_sidebar_backdrop_color @dt_sidebar_backdrop;
+@define-color card_bg_color @dt_card_bg;
+@define-color card_fg_color @dt_card_fg;
+@define-color card_shade_color @dt_shade;
+@define-color dialog_bg_color @dt_dialog_bg;
+@define-color dialog_fg_color @dt_dialog_fg;
+@define-color popover_bg_color @dt_popover_bg;
+@define-color popover_fg_color @dt_popover_fg;
+@define-color popover_shade_color @dt_shade;
+@define-color thumbnail_bg_color @dt_thumbnail_bg;
+@define-color thumbnail_fg_color @dt_view_fg;
+@define-color overview_bg_color @dt_surface_low;
+@define-color overview_fg_color @dt_window_fg;
+@define-color active_toggle_bg_color @dt_toggle_bg;
+@define-color active_toggle_fg_color @dt_toggle_fg;
+@define-color shade_color @dt_shade;
+@define-color scrollbar_outline_color @dt_scrollbar_outline;
+@define-color panel_bg_color @dt_window_bg;
+@define-color panel_fg_color @dt_window_fg;
+@define-color theme_bg_color @dt_window_bg;
+@define-color theme_fg_color @dt_window_fg;
+@define-color theme_base_color @dt_view_bg;
+@define-color theme_text_color @dt_view_fg;
+@define-color theme_selected_bg_color @dt_selection_bg;
+@define-color theme_selected_fg_color @dt_selection_fg;
+@define-color insensitive_bg_color @dt_disabled_bg;
+@define-color insensitive_fg_color @dt_disabled_fg;
+@define-color insensitive_base_color @dt_disabled_bg;
+@define-color theme_unfocused_bg_color @dt_window_bg;
+@define-color theme_unfocused_fg_color @dt_muted_fg;
+@define-color theme_unfocused_base_color @dt_view_bg;
+@define-color theme_unfocused_text_color @dt_muted_fg;
+@define-color theme_unfocused_selected_bg_color @dt_selection_inactive_bg;
+@define-color theme_unfocused_selected_fg_color @dt_selection_inactive_fg;
+@define-color unfocused_insensitive_color @dt_disabled_fg;
+@define-color borders @dt_border;
+@define-color unfocused_borders @dt_border;
+@define-color content_view_bg @dt_view_bg;
+@define-color text_view_bg @dt_view_bg;
+@define-color link_color @dt_link;
+@define-color link_visited_color @dt_link_visited;
+@define-color wm_title @dt_window_fg;
+@define-color wm_unfocused_title @dt_muted_fg;
+@define-color wm_highlight @dt_light;
+@define-color wm_borders_edge @dt_border;
+@define-color wm_bg_a @dt_headerbar_bg;
+@define-color wm_bg_b @dt_headerbar_bg;
+@define-color wm_shadow @dt_shadow;
+@define-color wm_border @dt_border;
+@define-color wm_button_hover_color_a @dt_button_hover;
+@define-color wm_button_hover_color_b @dt_button_hover;
+@define-color wm_button_active_color_a @dt_button_pressed;
+@define-color wm_button_active_color_b @dt_button_pressed;
+@define-color wm_button_active_color_c @dt_button_pressed;
+@define-color hb_button_bg @dt_button_bg;
+@define-color hb_button_fg @dt_button_fg;
+@define-color hb_button_hover @dt_button_hover;
+@define-color hb_button_pressed @dt_button_pressed;
+@define-color hb_control_border @dt_control_border;
+@define-color hb_muted_fg @dt_muted_fg;
+@define-color hb_focus @dt_focus;
+@define-color hb_tooltip_bg @dt_tooltip_bg;
+@define-color hb_tooltip_fg @dt_tooltip_fg;
+@define-color hb_menu_bg @dt_menu_bg;
+@define-color hb_menu_hover @dt_menu_hover;
+@define-color hb_accent_hover @dt_accent_hover;
+@define-color hb_accent_pressed @dt_accent_pressed;
+@define-color hb_selection_bg @dt_selection_bg;
+@define-color hb_selection_fg @dt_selection_fg;
+@define-color hb_scrollbar @dt_scrollbar;
+@define-color hb_scrollbar_hover @dt_scrollbar_hover;
+@define-color hb_osd_bg @dt_osd_bg;
+@define-color hb_osd_fg @dt_osd_fg;
+@define-color placeholder_text_color @dt_muted_fg;
+
+/* Plain GTK 4 Adwaita embeds literal colours instead of using Adw variables.
+ * Libadwaita widgets share the corresponding semantic roles. */
+window.background, .background {
+    color: var(--window-fg-color);
+    background-color: var(--window-bg-color);
+}
+/* GTK 4.24 uses ext-background-effect-v1: request compositor blur explicitly.
+ * Window opacity and the actual blur strength remain configured in Hyprland. */
+window.background { backdrop-filter: blur(20px); }
+/* Remove focus rectangles without disturbing entry borders or tab underlines. */
+* { outline-style: none; outline-width: 0; }
+.view, iconview, textview > text, gridview, columnview, listview {
+    color: var(--view-fg-color);
+    background-color: var(--view-bg-color);
+}
+entry, spinbutton:not(.vertical), dropdown > button {
+    color: var(--view-fg-color);
+    background-color: var(--view-bg-color);
+    border-color: var(--hyprbar-control-border);
+    background-image: none;
+}
+entry > text, textview > text { caret-color: var(--view-fg-color); }
+entry > text > placeholder, .dim-label {
+    color: var(--hyprbar-muted-fg);
+    opacity: 1;
+}
+button, toggle-group > toggle {
+    min-height: 20px;
+    padding: 2px 8px;
+    border-color: transparent;
+    border-radius: 3px;
+    box-shadow: none;
+    background-image: none;
+}
+button.image-button { min-width: 20px; padding: 2px; }
+.linked > button:not(:only-child), toggle-group > toggle:not(:only-child) { border-radius: 0; }
+.linked:not(.vertical) > button:first-child, toggle-group:not(.vertical) > toggle:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.linked:not(.vertical) > button:last-child, toggle-group:not(.vertical) > toggle:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+.linked.vertical > button:first-child, toggle-group.vertical > toggle:first-child { border-top-left-radius: 3px; border-top-right-radius: 3px; }
+.linked.vertical > button:last-child, toggle-group.vertical > toggle:last-child { border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
+button:not(.flat):not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited) {
+    color: var(--hyprbar-button-fg);
+    background-color: var(--hyprbar-button-bg);
+    background-image: none;
+}
+button:not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited):hover, button:not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited):focus-visible, modelbutton:hover, popover.menu modelbutton:hover {
+    background-color: var(--hyprbar-button-hover);
+    color: var(--window-fg-color);
+}
+button:not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited):active {
+    background-color: var(--hyprbar-button-pressed);
+}
+/* Neutral actions and ordinary toggles; navigation is handled separately. */
+button.suggested-action, button:checked {
+    color: var(--window-fg-color);
+    background-color: var(--active-toggle-bg-color);
+    background-image: none;
+}
+button.suggested-action:hover, button:checked:hover, button.suggested-action:focus-visible, button:checked:focus-visible {
+    color: var(--window-fg-color);
+    background-color: var(--hyprbar-button-hover);
+}
+button.suggested-action:active, button:checked:active {
+    background-color: var(--hyprbar-button-pressed);
+}
+stackswitcher > button:checked:not(:disabled), viewswitcher button:checked:not(:disabled), toggle-group > toggle:checked:not(:disabled), switch:checked, check:checked, check:indeterminate, radio:checked {
+    color: var(--accent-fg-color);
+    background-color: var(--accent-bg-color);
+    background-image: none;
+}
+switch:checked, check:checked, check:indeterminate, radio:checked {
+    border-color: var(--hyprbar-focus);
+}
+stackswitcher > button:checked:hover:not(:disabled), viewswitcher button:checked:hover:not(:disabled), toggle-group > toggle:checked:hover:not(:disabled) {
+    background-color: var(--hyprbar-accent-hover);
+}
+stackswitcher > button:checked:active:not(:disabled), viewswitcher button:checked:active:not(:disabled), toggle-group > toggle:checked:active:not(:disabled) {
+    background-color: var(--hyprbar-accent-pressed);
+}
+button.destructive-action {
+    color: var(--destructive-fg-color);
+    background-color: var(--destructive-bg-color);
+    background-image: none;
+}
+check, radio, switch {
+    color: var(--view-fg-color);
+    background-color: var(--view-bg-color);
+    border-color: var(--hyprbar-control-border);
+}
+switch slider {
+    background-color: var(--window-fg-color);
+    border-color: var(--hyprbar-control-border);
+}
+switch:checked slider { background-color: var(--accent-fg-color); }
+scale > value, scale marks mark label { color: var(--hyprbar-muted-fg); }
+entry:focus-within, spinbutton:focus-within, dropdown:focus-within > button {
+    border-color: var(--hyprbar-focus);
+}
+*:link, link, button:link { color: var(--link-color, @link_color); }
+*:visited, button:visited { color: @link_visited_color; }
+label.error, .error { color: var(--error-color); }
+label.warning, .warning { color: var(--warning-color); }
+label.success, .success { color: var(--success-color); }
+
+headerbar, .titlebar, menubar, popover menubar {
+    color: var(--headerbar-fg-color);
+    background-color: var(--headerbar-bg-color);
+    background-image: none;
+    border-color: var(--headerbar-border-color);
+}
+headerbar:backdrop, .titlebar:backdrop { background-color: var(--headerbar-backdrop-color); }
+.sidebar, placessidebar, stacksidebar {
+    color: var(--sidebar-fg-color);
+    background-color: var(--sidebar-bg-color);
+}
+.card, list.boxed-list { color: var(--card-fg-color); background-color: var(--card-bg-color); }
+dialog, messagedialog, .dialog { color: var(--dialog-fg-color); background-color: var(--dialog-bg-color); }
+popover > contents, popover.background > contents, popover.menu > contents {
+    color: var(--popover-fg-color);
+    background-color: var(--popover-bg-color);
+    background-image: none;
+    border-color: @borders;
+}
+popover modelbutton, popover modelbutton label { color: var(--popover-fg-color); }
+/* Menu popovers get a quieter surface without changing other popovers. */
+/* Solid-CSD fallback themes can put a frame on the popover itself. */
+popover.menu {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+popover.menu > contents {
+    color: var(--popover-fg-color);
+    background-color: var(--hyprbar-menu-bg);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2px;
+}
+popover.menu > arrow {
+    background-color: var(--hyprbar-menu-bg);
+    border: none;
+    box-shadow: none;
+}
+popover.menu > contents > stack > box, popover.menu > contents > scrolledwindow > viewport > stack > box {
+    padding: 0;
+}
+popover.menu modelbutton, popover.menu list > row, popover.menu listview > row {
+    color: var(--popover-fg-color);
+    background-color: transparent;
+    border-radius: 0;
+    min-height: 20px;
+    padding: 0 8px;
+    margin: 0;
+}
+popover.menu list, popover.menu listview {
+    color: var(--popover-fg-color);
+    background-color: transparent;
+    padding: 0;
+}
+popover.menu modelbutton:hover, popover.menu modelbutton:selected, popover.menu list > row:hover, popover.menu list > row:selected, popover.menu listview > row:hover, popover.menu listview > row:selected {
+    color: var(--popover-fg-color);
+    background-color: var(--hyprbar-menu-hover);
+}
+popover.menu separator { margin: 3px 0; }
+popover.menu modelbutton:disabled, popover.menu modelbutton:disabled label {
+    color: @insensitive_fg_color;
+    filter: none;
+}
+menubar > item, menubar > item > button { border-radius: 0; }
+tooltip, tooltip.background { color: @hb_tooltip_fg; background-color: @hb_tooltip_bg; }
+tooltip label { color: @hb_tooltip_fg; }
+
+selection, label > selection, label > selection:focus-within, textview > text > selection, textview > text > selection:focus-within, entry > text > selection, entry > text > selection:focus-within, .view:selected, .view:selected:focus, row:selected, row:selected:focus, gridview > child:selected, columnview row:selected, listview row:selected {
+    color: @hb_selection_fg;
+    background-color: @hb_selection_bg;
+}
+.view:selected:backdrop, row:selected:backdrop, gridview > child:selected:backdrop, textview > text > selection:backdrop {
+    color: @theme_unfocused_selected_fg_color;
+    background-color: @theme_unfocused_selected_bg_color;
+}
+separator { background-color: @borders; }
+scrollbar slider { background-color: @hb_scrollbar; border-color: transparent; }
+scrollbar slider:hover { background-color: @hb_scrollbar_hover; }
+scale trough, progressbar trough, levelbar trough {
+    background-color: var(--view-bg-color);
+    border-color: var(--hyprbar-control-border);
+}
+scale highlight, progressbar progress, levelbar block.filled {
+    background-color: var(--accent-bg-color);
+    border-color: var(--hyprbar-focus);
+    background-image: none;
+}
+scale slider {
+    background-color: var(--window-fg-color);
+    border-color: var(--hyprbar-control-border);
+    background-image: none;
+}
+notebook > header, notebook > header > tabs > tab {
+    color: var(--window-fg-color);
+    background-color: var(--headerbar-bg-color);
+    border-color: @borders;
+}
+notebook > header > tabs > tab:checked { box-shadow: inset 0 -3px var(--hyprbar-focus); }
+rubberband {
+    background-color: alpha(@accent_color, 0.2);
+    border-color: var(--hyprbar-focus);
+}
+.osd { color: @hb_osd_fg; background-color: @hb_osd_bg; }
+button:disabled, entry:disabled, check:disabled, radio:disabled, switch:disabled {
+    color: @insensitive_fg_color;
+    background-color: @insensitive_bg_color;
+    border-color: @borders;
+    background-image: none;
+}
+button:disabled { border-color: transparent; }
+label:disabled, popover modelbutton:disabled, popover modelbutton:disabled label {
+    color: @insensitive_fg_color;
+}
+

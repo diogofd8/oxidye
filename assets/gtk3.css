@@ -1,0 +1,257 @@
+/* Fixed GTK 3 layout. Colour sources are imported from this directory. */
+@import url("fixed-colors.css");
+@import url("accent-colors.css");
+@define-color accent_bg_color @dt_accent_bg;
+@define-color accent_fg_color @dt_accent_fg;
+@define-color accent_color @dt_accent_text;
+@define-color destructive_bg_color @dt_destructive_bg;
+@define-color destructive_fg_color @dt_destructive_fg;
+@define-color destructive_color @dt_destructive_text;
+@define-color success_bg_color @dt_success_bg;
+@define-color success_fg_color @dt_success_fg;
+@define-color success_color @dt_success_text;
+@define-color warning_bg_color @dt_warning_bg;
+@define-color warning_fg_color @dt_warning_fg;
+@define-color warning_color @dt_warning_text;
+@define-color error_bg_color @dt_error_bg;
+@define-color error_fg_color @dt_error_fg;
+@define-color error_color @dt_error_text;
+@define-color window_bg_color @dt_window_bg;
+@define-color window_fg_color @dt_window_fg;
+@define-color view_bg_color @dt_view_bg;
+@define-color view_fg_color @dt_view_fg;
+@define-color headerbar_bg_color @dt_headerbar_bg;
+@define-color headerbar_fg_color @dt_headerbar_fg;
+@define-color headerbar_border_color @dt_border;
+@define-color headerbar_backdrop_color @dt_headerbar_backdrop;
+@define-color headerbar_shade_color @dt_shade;
+@define-color headerbar_darker_shade_color @dt_shade_strong;
+@define-color sidebar_bg_color @dt_sidebar_bg;
+@define-color sidebar_fg_color @dt_sidebar_fg;
+@define-color sidebar_backdrop_color @dt_sidebar_backdrop;
+@define-color sidebar_border_color @dt_border;
+@define-color sidebar_shade_color @dt_shade;
+@define-color secondary_sidebar_bg_color @dt_secondary_sidebar_bg;
+@define-color secondary_sidebar_fg_color @dt_sidebar_fg;
+@define-color secondary_sidebar_backdrop_color @dt_sidebar_backdrop;
+@define-color card_bg_color @dt_card_bg;
+@define-color card_fg_color @dt_card_fg;
+@define-color card_shade_color @dt_shade;
+@define-color dialog_bg_color @dt_dialog_bg;
+@define-color dialog_fg_color @dt_dialog_fg;
+@define-color popover_bg_color @dt_popover_bg;
+@define-color popover_fg_color @dt_popover_fg;
+@define-color popover_shade_color @dt_shade;
+@define-color thumbnail_bg_color @dt_thumbnail_bg;
+@define-color thumbnail_fg_color @dt_view_fg;
+@define-color overview_bg_color @dt_surface_low;
+@define-color overview_fg_color @dt_window_fg;
+@define-color active_toggle_bg_color @dt_toggle_bg;
+@define-color active_toggle_fg_color @dt_toggle_fg;
+@define-color shade_color @dt_shade;
+@define-color scrollbar_outline_color @dt_scrollbar_outline;
+@define-color panel_bg_color @dt_window_bg;
+@define-color panel_fg_color @dt_window_fg;
+@define-color theme_bg_color @dt_window_bg;
+@define-color theme_fg_color @dt_window_fg;
+@define-color theme_base_color @dt_view_bg;
+@define-color theme_text_color @dt_view_fg;
+@define-color theme_selected_bg_color @dt_selection_bg;
+@define-color theme_selected_fg_color @dt_selection_fg;
+@define-color insensitive_bg_color @dt_disabled_bg;
+@define-color insensitive_fg_color @dt_disabled_fg;
+@define-color insensitive_base_color @dt_disabled_bg;
+@define-color theme_unfocused_bg_color @dt_window_bg;
+@define-color theme_unfocused_fg_color @dt_muted_fg;
+@define-color theme_unfocused_base_color @dt_view_bg;
+@define-color theme_unfocused_text_color @dt_muted_fg;
+@define-color theme_unfocused_selected_bg_color @dt_selection_inactive_bg;
+@define-color theme_unfocused_selected_fg_color @dt_selection_inactive_fg;
+@define-color unfocused_insensitive_color @dt_disabled_fg;
+@define-color borders @dt_border;
+@define-color unfocused_borders @dt_border;
+@define-color content_view_bg @dt_view_bg;
+@define-color text_view_bg @dt_view_bg;
+@define-color link_color @dt_link;
+@define-color link_visited_color @dt_link_visited;
+@define-color wm_title @dt_window_fg;
+@define-color wm_unfocused_title @dt_muted_fg;
+@define-color wm_highlight @dt_light;
+@define-color wm_borders_edge @dt_border;
+@define-color wm_bg_a @dt_headerbar_bg;
+@define-color wm_bg_b @dt_headerbar_bg;
+@define-color wm_shadow @dt_shadow;
+@define-color wm_border @dt_border;
+@define-color wm_button_hover_color_a @dt_button_hover;
+@define-color wm_button_hover_color_b @dt_button_hover;
+@define-color wm_button_active_color_a @dt_button_pressed;
+@define-color wm_button_active_color_b @dt_button_pressed;
+@define-color wm_button_active_color_c @dt_button_pressed;
+@define-color hb_button_bg @dt_button_bg;
+@define-color hb_button_fg @dt_button_fg;
+@define-color hb_button_hover @dt_button_hover;
+@define-color hb_button_pressed @dt_button_pressed;
+@define-color hb_control_border @dt_control_border;
+@define-color hb_muted_fg @dt_muted_fg;
+@define-color hb_focus @dt_focus;
+@define-color hb_tooltip_bg @dt_tooltip_bg;
+@define-color hb_tooltip_fg @dt_tooltip_fg;
+@define-color hb_menu_bg @dt_menu_bg;
+@define-color hb_menu_hover @dt_menu_hover;
+@define-color hb_accent_hover @dt_accent_hover;
+@define-color hb_accent_pressed @dt_accent_pressed;
+@define-color hb_selection_bg @dt_selection_bg;
+@define-color hb_selection_fg @dt_selection_fg;
+@define-color hb_scrollbar @dt_scrollbar;
+@define-color hb_scrollbar_hover @dt_scrollbar_hover;
+@define-color hb_osd_bg @dt_osd_bg;
+@define-color hb_osd_fg @dt_osd_fg;
+@define-color placeholder_text_color @dt_muted_fg;
+
+/* adw-gtk3 hardcodes tooltip colours and attenuates focus/selection colours. */
+tooltip, tooltip.background {
+    background-color: @hb_tooltip_bg;
+    color: @hb_tooltip_fg;
+}
+tooltip label { color: @hb_tooltip_fg; }
+
+/* Compact, square dropdowns, context menus and nested submenus. */
+menu, .menu, .context-menu {
+    color: @popover_fg_color;
+    background-color: @hb_menu_bg;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    margin: 0;
+    padding: 2px;
+}
+window.popup decoration, menubar > menuitem { border-radius: 0; }
+window.popup decoration { border: none; box-shadow: none; }
+menu menuitem {
+    min-height: 16px;
+    padding: 2px 8px;
+    margin: 0;
+    border-radius: 0;
+}
+menu menuitem:hover, menubar > menuitem:hover {
+    color: @popover_fg_color;
+    background-color: @hb_menu_hover;
+    background-image: none;
+}
+menu menuitem:disabled { color: @insensitive_fg_color; }
+menu separator, popover.menu separator { margin: 3px 0; }
+popover.menu { border-radius: 0; }
+popover.menu > stack { margin: 0; }
+popover.menu modelbutton, popover.menu .menuitem.button {
+    color: @popover_fg_color;
+    min-height: 20px;
+    padding: 0 8px;
+    margin: 0;
+    border-radius: 0;
+}
+popover.menu modelbutton:hover, popover.menu modelbutton:selected {
+    color: @popover_fg_color;
+    background-color: @hb_menu_hover;
+}
+popover.menu modelbutton:disabled { color: @insensitive_fg_color; }
+
+/* Suppress the base theme's dashed focus rectangles, including notebook tabs. */
+* { outline-style: none; outline-width: 0; }
+entry:focus, spinbutton:focus, combobox:focus {
+    border-color: @hb_focus;
+}
+/* Compact, gently rounded buttons with flat, borderless fills. */
+button {
+    min-height: 20px;
+    padding: 2px 8px;
+    border-color: transparent;
+    border-radius: 3px;
+    box-shadow: none;
+    background-image: none;
+}
+button.image-button { min-width: 20px; padding: 2px; }
+/* Keep the interior seams of linked/segmented controls square. */
+.linked > button:not(:only-child) { border-radius: 0; }
+.linked:not(.vertical) > button:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.linked:not(.vertical) > button:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+.linked.vertical > button:first-child { border-top-left-radius: 3px; border-top-right-radius: 3px; }
+.linked.vertical > button:last-child { border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
+button:not(.flat):not(.sidebar-button):not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited) {
+    color: @hb_button_fg;
+    background-color: @hb_button_bg;
+}
+button:not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited):hover, button:not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited):focus {
+    color: @hb_button_fg;
+    background-color: @hb_button_hover;
+}
+button:not(.suggested-action):not(.destructive-action):not(:checked):not(:disabled):not(:link):not(:visited):active {
+    background-color: @hb_button_pressed;
+}
+
+/* Neutral action buttons and persistent toolbar/breadcrumb toggles. */
+button.suggested-action, button:checked {
+    color: @window_fg_color;
+    background-color: @active_toggle_bg_color;
+    background-image: none;
+}
+button.suggested-action:hover, button:checked:hover, button.suggested-action:focus, button:checked:focus {
+    background-color: @hb_button_hover;
+}
+button.suggested-action:active, button:checked:active {
+    background-color: @hb_button_pressed;
+}
+/* Segmented navigation and choice controls retain the full accent. */
+.stack-switcher > button:checked:not(:disabled), switch:checked, check:checked, check:indeterminate, radio:checked {
+    color: @accent_fg_color;
+    background-color: @accent_bg_color;
+    background-image: none;
+}
+switch:checked, check:checked, check:indeterminate, radio:checked {
+    border-color: @hb_focus;
+}
+.stack-switcher > button:checked:hover:not(:disabled) {
+    background-color: @hb_accent_hover;
+}
+.stack-switcher > button:checked:active:not(:disabled) {
+    background-color: @hb_accent_pressed;
+}
+button.destructive-action {
+    color: @destructive_fg_color;
+    background-color: @destructive_bg_color;
+    background-image: none;
+}
+
+selection, label selection, entry selection, textview text selection, .view:selected, .view:selected:focus, treeview.view:selected, treeview.view:selected:focus, iconview:selected, iconview:selected:focus, row:selected, row:selected:focus {
+    color: @hb_selection_fg;
+    background-color: @hb_selection_bg;
+}
+.view:selected:backdrop, treeview.view:selected:backdrop, iconview:selected:backdrop, entry selection:backdrop, textview text selection:backdrop, row:selected:backdrop {
+    color: @theme_unfocused_selected_fg_color;
+    background-color: @theme_unfocused_selected_bg_color;
+}
+
+*:link, button:link, link, label.link { color: @link_color; }
+*:visited, button:visited { color: @link_visited_color; }
+.dim-label, entry > text > placeholder { color: @hb_muted_fg; opacity: 1; }
+treeview header button, scale value, scale marks mark label { color: @hb_muted_fg; }
+.error { color: @error_color; }
+.warning { color: @warning_color; }
+.success { color: @success_color; }
+
+scrollbar slider { background-color: @hb_scrollbar; }
+scrollbar slider:hover { background-color: @hb_scrollbar_hover; }
+progressbar progress, scale highlight {
+    background-color: @accent_bg_color;
+    border-color: @hb_focus;
+}
+.osd { color: @hb_osd_fg; background-color: @hb_osd_bg; }
+
+button:disabled, check:disabled, radio:disabled, switch:disabled {
+    color: @insensitive_fg_color;
+    background-color: @insensitive_bg_color;
+    border-color: @borders;
+}
+button:disabled { border-color: transparent; }
+

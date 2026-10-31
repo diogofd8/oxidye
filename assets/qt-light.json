@@ -1,0 +1,546 @@
+{
+  "version": 1,
+  "name": "OxidyeLight",
+  "qt": {
+    "active": {
+      "WindowText": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "Button": {
+        "color": "oklch(0.927114519 0.007493802 260.7315481)"
+      },
+      "Light": {
+        "color": "oklch(1.000002967 0.000000037 0.0000000)"
+      },
+      "Midlight": {
+        "color": "oklch(0.954756829 0.005771336 264.5320389)"
+      },
+      "Dark": {
+        "color": "oklch(0.676075134 0.029998031 258.3721529)"
+      },
+      "Mid": {
+        "color": "oklch(0.769230304 0.024712859 256.1242428)"
+      },
+      "Text": {
+        "color": "oklch(0.232176190 0.016238441 252.4608881)"
+      },
+      "BrightText": {
+        "color": "oklch(1.000002967 0.000000037 0.0000000)"
+      },
+      "ButtonText": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "Base": {
+        "color": "oklch(0.991631813 0.002636337 286.3516711)"
+      },
+      "Window": {
+        "color": "oklch(0.969956240 0.002871774 264.5419697)"
+      },
+      "Shadow": {
+        "color": "oklch(0 0 0)"
+      },
+      "Highlight": {
+        "accent": "selection_bg"
+      },
+      "HighlightedText": {
+        "accent": "selection_fg"
+      },
+      "Link": {
+        "accent": "link"
+      },
+      "LinkVisited": {
+        "accent": "link_visited"
+      },
+      "AlternateBase": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "NoRole": {
+        "color": "oklch(0 0 0)"
+      },
+      "ToolTipBase": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "ToolTipText": {
+        "color": "oklch(0.232176190 0.016238441 252.4608881)"
+      },
+      "PlaceholderText": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "Accent": {
+        "accent": "accent_bg"
+      }
+    },
+    "inactive": {
+      "WindowText": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "Button": {
+        "color": "oklch(0.927114519 0.007493802 260.7315481)"
+      },
+      "Light": {
+        "color": "oklch(1.000002967 0.000000037 0.0000000)"
+      },
+      "Midlight": {
+        "color": "oklch(0.954756829 0.005771336 264.5320389)"
+      },
+      "Dark": {
+        "color": "oklch(0.676075134 0.029998031 258.3721529)"
+      },
+      "Mid": {
+        "color": "oklch(0.769230304 0.024712859 256.1242428)"
+      },
+      "Text": {
+        "color": "oklch(0.232176190 0.016238441 252.4608881)"
+      },
+      "BrightText": {
+        "color": "oklch(1.000002967 0.000000037 0.0000000)"
+      },
+      "ButtonText": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "Base": {
+        "color": "oklch(0.991631813 0.002636337 286.3516711)"
+      },
+      "Window": {
+        "color": "oklch(0.969956240 0.002871774 264.5419697)"
+      },
+      "Shadow": {
+        "color": "oklch(0 0 0)"
+      },
+      "Highlight": {
+        "accent": "selection_inactive_bg"
+      },
+      "HighlightedText": {
+        "accent": "selection_inactive_fg"
+      },
+      "Link": {
+        "accent": "link"
+      },
+      "LinkVisited": {
+        "accent": "link_visited"
+      },
+      "AlternateBase": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "NoRole": {
+        "color": "oklch(0 0 0)"
+      },
+      "ToolTipBase": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "ToolTipText": {
+        "color": "oklch(0.232176190 0.016238441 252.4608881)"
+      },
+      "PlaceholderText": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "Accent": {
+        "accent": "accent_bg"
+      }
+    },
+    "disabled": {
+      "WindowText": {
+        "color": "oklch(0.650303099 0.022035377 257.4949444)"
+      },
+      "Button": {
+        "color": "oklch(0.927114519 0.007493802 260.7315481)"
+      },
+      "Light": {
+        "color": "oklch(1.000002967 0.000000037 0.0000000)"
+      },
+      "Midlight": {
+        "color": "oklch(0.954756829 0.005771336 264.5320389)"
+      },
+      "Dark": {
+        "color": "oklch(0.676075134 0.029998031 258.3721529)"
+      },
+      "Mid": {
+        "color": "oklch(0.769230304 0.024712859 256.1242428)"
+      },
+      "Text": {
+        "color": "oklch(0.650303099 0.022035377 257.4949444)"
+      },
+      "BrightText": {
+        "color": "oklch(1.000002967 0.000000037 0.0000000)"
+      },
+      "ButtonText": {
+        "color": "oklch(0.650303099 0.022035377 257.4949444)"
+      },
+      "Base": {
+        "color": "oklch(0.991631813 0.002636337 286.3516711)"
+      },
+      "Window": {
+        "color": "oklch(0.969956240 0.002871774 264.5419697)"
+      },
+      "Shadow": {
+        "color": "oklch(0 0 0)"
+      },
+      "Highlight": {
+        "accent": "accent_soft"
+      },
+      "HighlightedText": {
+        "color": "oklch(0.650303099 0.022035377 257.4949444)"
+      },
+      "Link": {
+        "accent": "link"
+      },
+      "LinkVisited": {
+        "accent": "link_visited"
+      },
+      "AlternateBase": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "NoRole": {
+        "color": "oklch(0 0 0)"
+      },
+      "ToolTipBase": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "ToolTipText": {
+        "color": "oklch(0.232176190 0.016238441 252.4608881)"
+      },
+      "PlaceholderText": {
+        "color": "oklch(0.650303099 0.022035377 257.4949444)"
+      },
+      "Accent": {
+        "accent": "accent_soft"
+      }
+    }
+  },
+  "kde": {
+    "ColorEffects:Disabled": {
+      "Color": {
+        "color": "oklch(0.341669780 0.000000013 89.8755628)"
+      },
+      "ColorAmount": "0",
+      "ColorEffect": "0",
+      "ContrastAmount": "0.65",
+      "ContrastEffect": "1",
+      "IntensityAmount": "0.1",
+      "IntensityEffect": "2"
+    },
+    "ColorEffects:Inactive": {
+      "ChangeSelectionColor": "false",
+      "Color": {
+        "color": "oklch(0.543136087 0.001979312 67.7817918)"
+      },
+      "ColorAmount": "0.025000000000000001",
+      "ColorEffect": "2",
+      "ContrastAmount": "0.10000000000000001",
+      "ContrastEffect": "2",
+      "Enable": "false",
+      "IntensityAmount": "0",
+      "IntensityEffect": "0"
+    },
+    "Colors:Button": {
+      "BackgroundAlternate": {
+        "color": "oklch(0.905373327 0.009249642 258.3372094)"
+      },
+      "BackgroundNormal": {
+        "color": "oklch(0.927114519 0.007493802 260.7315481)"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "accent_text"
+      },
+      "ForegroundInactive": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "ForegroundLink": {
+        "accent": "link"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.410943740 0.133592101 29.7587079)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.365974032 0.077888834 73.1554376)"
+      },
+      "ForegroundNormal": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.360988047 0.070903262 145.0780342)"
+      },
+      "ForegroundVisited": {
+        "accent": "link_visited"
+      }
+    },
+    "Colors:Complementary": {
+      "BackgroundAlternate": {
+        "color": "oklch(0.954756829 0.005771336 264.5320389)"
+      },
+      "BackgroundNormal": {
+        "color": "oklch(0.969956240 0.002871774 264.5419697)"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "accent_text"
+      },
+      "ForegroundInactive": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "ForegroundLink": {
+        "accent": "link"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.410943740 0.133592101 29.7587079)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.365974032 0.077888834 73.1554376)"
+      },
+      "ForegroundNormal": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.360988047 0.070903262 145.0780342)"
+      },
+      "ForegroundVisited": {
+        "accent": "link_visited"
+      }
+    },
+    "Colors:Header": {
+      "BackgroundAlternate": {
+        "color": "oklch(0.954756829 0.005771336 264.5320389)"
+      },
+      "BackgroundNormal": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "accent_text"
+      },
+      "ForegroundInactive": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "ForegroundLink": {
+        "accent": "link"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.410943740 0.133592101 29.7587079)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.365974032 0.077888834 73.1554376)"
+      },
+      "ForegroundNormal": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.360988047 0.070903262 145.0780342)"
+      },
+      "ForegroundVisited": {
+        "accent": "link_visited"
+      }
+    },
+    "Colors:Selection": {
+      "BackgroundAlternate": {
+        "accent": "selection_bg"
+      },
+      "BackgroundNormal": {
+        "accent": "selection_bg"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "selection_fg"
+      },
+      "ForegroundInactive": {
+        "accent": "selection_fg"
+      },
+      "ForegroundLink": {
+        "accent": "selection_fg"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.838683156 0.089809876 32.5945734)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.867906653 0.102613948 85.6127071)"
+      },
+      "ForegroundNormal": {
+        "accent": "selection_fg"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.843946123 0.083251962 132.7945232)"
+      },
+      "ForegroundVisited": {
+        "accent": "selection_fg"
+      }
+    },
+    "Colors:Tooltip": {
+      "BackgroundAlternate": {
+        "color": "oklch(0.954756829 0.005771336 264.5320389)"
+      },
+      "BackgroundNormal": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "accent_text"
+      },
+      "ForegroundInactive": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "ForegroundLink": {
+        "accent": "link"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.410943740 0.133592101 29.7587079)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.365974032 0.077888834 73.1554376)"
+      },
+      "ForegroundNormal": {
+        "color": "oklch(0.232176190 0.016238441 252.4608881)"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.360988047 0.070903262 145.0780342)"
+      },
+      "ForegroundVisited": {
+        "accent": "link_visited"
+      }
+    },
+    "Colors:View": {
+      "BackgroundAlternate": {
+        "color": "oklch(0.938926104 0.006285690 255.4761560)"
+      },
+      "BackgroundNormal": {
+        "color": "oklch(0.991631813 0.002636337 286.3516711)"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "accent_text"
+      },
+      "ForegroundInactive": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "ForegroundLink": {
+        "accent": "link"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.410943740 0.133592101 29.7587079)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.365974032 0.077888834 73.1554376)"
+      },
+      "ForegroundNormal": {
+        "color": "oklch(0.232176190 0.016238441 252.4608881)"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.360988047 0.070903262 145.0780342)"
+      },
+      "ForegroundVisited": {
+        "accent": "link_visited"
+      }
+    },
+    "Colors:Window": {
+      "BackgroundAlternate": {
+        "color": "oklch(0.954756829 0.005771336 264.5320389)"
+      },
+      "BackgroundNormal": {
+        "color": "oklch(0.969956240 0.002871774 264.5419697)"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "accent_text"
+      },
+      "ForegroundInactive": {
+        "color": "oklch(0.353761762 0.036919053 259.4581468)"
+      },
+      "ForegroundLink": {
+        "accent": "link"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.410943740 0.133592101 29.7587079)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.365974032 0.077888834 73.1554376)"
+      },
+      "ForegroundNormal": {
+        "color": "oklch(0.273128206 0.020257264 251.5816265)"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.360988047 0.070903262 145.0780342)"
+      },
+      "ForegroundVisited": {
+        "accent": "link_visited"
+      }
+    },
+    "General": {
+      "ColorScheme": "OxidyeLight",
+      "AccentColor": {
+        "accent": "accent_bg"
+      }
+    },
+    "Colors:Selection][Inactive": {
+      "BackgroundAlternate": {
+        "accent": "selection_inactive_bg"
+      },
+      "BackgroundNormal": {
+        "accent": "selection_inactive_bg"
+      },
+      "DecorationFocus": {
+        "accent": "focus"
+      },
+      "DecorationHover": {
+        "accent": "accent_hover"
+      },
+      "ForegroundActive": {
+        "accent": "selection_inactive_fg"
+      },
+      "ForegroundInactive": {
+        "accent": "selection_inactive_fg"
+      },
+      "ForegroundLink": {
+        "accent": "selection_inactive_fg"
+      },
+      "ForegroundNegative": {
+        "color": "oklch(0.410943740 0.133592101 29.7587079)"
+      },
+      "ForegroundNeutral": {
+        "color": "oklch(0.365974032 0.077888834 73.1554376)"
+      },
+      "ForegroundNormal": {
+        "accent": "selection_inactive_fg"
+      },
+      "ForegroundPositive": {
+        "color": "oklch(0.360988047 0.070903262 145.0780342)"
+      },
+      "ForegroundVisited": {
+        "accent": "selection_inactive_fg"
+      }
+    }
+  }
+}

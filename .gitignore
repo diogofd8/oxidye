@@ -1,0 +1,18 @@
+# Build outputs. Keep Cargo.lock, authored assets and required helper sources tracked.
+/target/
+/build/
+
+# Editor and operating-system temporary files.
+*.rs.bk
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Formatting
+.clang-format
+rustfmt.toml
+
+# Internal Documentation & Testing
+docs/
+tests/

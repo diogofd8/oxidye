@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "mode": "light",
+  "icons": {
+    "dark": "Papirus-Dark",
+    "light": "Papirus"
+  },
+  "accents": "accents.json",
+  "qt": {
+    "profiles": {
+      "dark": "qt-dark.json",
+      "light": "qt-light.json"
+    },
+    "palettes": {
+      "dark": "qt/dark.conf",
+      "light": "qt/light.conf"
+    },
+    "schemes": {
+      "dark": "qt/OxidyeDark.colors",
+      "light": "qt/OxidyeLight.colors"
+    }
+  },
+  "gtk": {
+    "profiles": {
+      "dark": "gtk-dark.json",
+      "light": "gtk-light.json"
+    },
+    "layouts": {
+      "gtk3": "gtk/gtk3.css",
+      "gtk4": "gtk/gtk4.css"
+    },
+    "outputs": {
+      "dark": "gtk/dark",
+      "light": "gtk/light"
+    }
+  },
+  "vscode": {
+    "dark": "GitHub Dark High Contrast",
+    "light": "GitHub Light High Contrast"
+  }
+}
