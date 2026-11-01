@@ -81,7 +81,7 @@ pub(crate) fn notify_xsettings() {
     }
 }
 /// Stage and validate GTK output and preserved user rules, then prepare settings.
-pub(crate) fn selection(paths: &Paths, rendered: &Rendered, files: &BTreeMap<String, String>, validators: &Path, before: &[Snapshot], directory: &str) -> Result<Vec<Snapshot>, String> {
+pub(crate) fn selection(paths: &Paths, rendered: &Rendered, files: &BTreeMap<String, String>, validators: &Path, before: &[Snapshot], directory: &str, report: &str) -> Result<Vec<Snapshot>, String> {
     let stage = tempfile::tempdir_in(&paths.state).map_err(|e| e.to_string())?;
     for (name, data) in files {
         fs::write(stage.path().join(name), data).map_err(|e| e.to_string())?;
@@ -131,6 +131,6 @@ pub(crate) fn selection(paths: &Paths, rendered: &Rendered, files: &BTreeMap<Str
         }
         push("xsettingsd/xsettingsd.conf".into(), output);
     }
-    push("oxidye/gtk/applied.json".into(), String::from_utf8(json_bytes(&rendered)?).unwrap());
+    push(report.into(), String::from_utf8(json_bytes(&rendered)?).unwrap());
     Ok(after)
 }

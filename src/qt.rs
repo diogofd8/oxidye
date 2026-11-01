@@ -245,9 +245,13 @@ impl Rendered {
         Ok(report)
     }
     pub fn palette_ini(&self) -> String {
-        let mut result = match self.mode {
-            Mode::Dark => "# Fixed SweetAmbar neutrals and separately selected accents.\n",
-            Mode::Light => "# Fixed light neutrals and separately selected accents.\n",
+        let mut result = if self.kde.get("General").and_then(|g| g.get("ColorScheme")).is_some_and(|name| name.starts_with("OxidyeMatugen")) {
+            "# Image-derived Matugen colours mapped by Oxidye.\n"
+        } else {
+            match self.mode {
+                Mode::Dark => "# Fixed SweetAmbar neutrals and separately selected accents.\n",
+                Mode::Light => "# Fixed light neutrals and separately selected accents.\n",
+            }
         }
         .to_string();
         result.push_str("# Shared Qt 5/6 palette: Qt 5 ignores the final Accent role.\n[ColorScheme]\n");

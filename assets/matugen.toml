@@ -1,0 +1,11 @@
+# Increment GENERATION_PROFILE_VERSION in src/matugen.rs when generation settings change.
+[config]
+caching = true
+version_check = false
+
+[config.custom_colors]
+success = { color = "#2E7D32", blend = false }
+warning = { color = "#F9A825", blend = false }
+info = { color = "#1565C0", blend = false }
+
+[templates]

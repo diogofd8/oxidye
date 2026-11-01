@@ -17,7 +17,7 @@ fn remove_ini_group(input: &str, name: &str) -> String {
         .collect()
 }
 /// Build the shared Qt selection/settings plan without installing or notifying.
-pub(crate) fn selection(paths: &Paths, rendered: &Rendered, before: &[Snapshot], palette_relative: &str, scheme_relative: &str) -> Result<Vec<Snapshot>, String> {
+pub(crate) fn selection(paths: &Paths, rendered: &Rendered, before: &[Snapshot], palette_relative: &str, scheme_relative: &str, report: &str) -> Result<Vec<Snapshot>, String> {
     let previous = |name: &str| before.iter().find(|file| file.relative == name).unwrap();
     let mut after = Vec::new();
     let mut push = |relative: &str, contents: String| {
@@ -42,7 +42,7 @@ pub(crate) fn selection(paths: &Paths, rendered: &Rendered, before: &[Snapshot],
         // Replacing the root config also triggers qtct's directory watcher when only the palette in a different directory changed.
         push(&file, edit_ini(previous(&file).contents.as_deref().unwrap_or(""), &updates));
     }
-    push("oxidye/qt/applied.json", String::from_utf8(rendered.json()?).unwrap());
+    push(report, String::from_utf8(rendered.json()?).unwrap());
     Ok(after)
 }
 pub(crate) fn notify_breeze(groups: &BTreeMap<String, BTreeMap<String, String>>) {

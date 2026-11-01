@@ -1,6 +1,7 @@
-//! Synchronous accent generation and fixed toolkit application. Generation is pure; toolkit installers own finite file and desktop-preference updates.
+//! Synchronous accent generation and fixed/image-derived toolkit application. Toolkit installers own finite file and desktop-preference updates.
 mod config_io;
 pub mod gtk;
+pub mod matugen;
 pub mod qt;
 pub mod theme;
 mod vscode;

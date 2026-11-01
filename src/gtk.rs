@@ -103,7 +103,17 @@ impl Profile {
     }
 }
 impl Rendered {
-    fn validate(&mut self) -> Result<(), String> {
+    pub(crate) fn validate(&mut self) -> Result<(), String> {
+        let reference: ModePalette = serde_json::from_str(include_str!("../assets/neutrals-dark.json")).map_err(|e| e.to_string())?;
+        let expected: BTreeSet<_> = reference.palette.keys().cloned().chain(crate::DECORATIVE.map(str::to_string)).chain(["error", "destructive", "success", "warning", "info"].into_iter().flat_map(|name| ["bg", "fg", "text"].map(move |suffix| format!("{name}_{suffix}")))).collect();
+        if self.version != 1 || self.colours.keys().cloned().collect::<BTreeSet<_>>() != expected {
+            return Err("invalid GTK rendered palette version or colour roles".into());
+        }
+        self.seed.parse::<Seed>()?;
+        if !["blue", "teal", "green", "yellow", "orange", "red", "pink", "purple", "slate"].contains(&self.named_accent.as_str()) || self.colours.iter().any(|(role, color)| !color.alpha.is_finite() || !(0.0..=1.0).contains(&color.alpha) || (color.alpha != 1.0 && !["shade", "shade_strong", "shadow", "scrollbar_outline"].contains(&role.as_str()))) {
+            return Err("invalid GTK rendered accent or opacity".into());
+        }
+        self.contrast_checks.clear();
         let mut pairs = Vec::new();
         for (fg, bg) in [("window_fg", "window_bg"), ("view_fg", "view_bg"), ("view_fg", "view_alt"), ("button_fg", "button_bg"), ("button_fg", "button_hover"), ("button_fg", "button_pressed"), ("toggle_fg", "toggle_bg"), ("headerbar_fg", "headerbar_bg"), ("sidebar_fg", "sidebar_bg"), ("card_fg", "card_bg"), ("popover_fg", "popover_bg"), ("popover_fg", "menu_bg"), ("popover_fg", "menu_hover"), ("dialog_fg", "dialog_bg"), ("tooltip_fg", "tooltip_bg"), ("osd_fg", "osd_bg"), ("selection_fg", "selection_bg"), ("selection_inactive_fg", "selection_inactive_bg")] {
             pairs.push((fg.to_string(), bg.to_string(), 4.5));
